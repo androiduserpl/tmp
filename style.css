@@ -1,0 +1,34 @@
+* {
+    font-family: "Lato", sans-serif;
+}
+
+.nav-mount {
+    background-color: #fff;
+}
+
+.navbar-brand img {
+    height: 50px;
+} 
+
+.navbar a {
+    text-transform: uppercase;
+    padding: 10px;
+    color: #442517;
+    font-size: 1.2rem;
+    line-height: 50px;
+    font-weight: 700;
+    transition: all .2s;
+}
+
+.navbar a:hover {
+    background-color: #94c01c;
+    color: #fff;
+}
+
+.custom-toggler.navbar-toggler {
+  border-color: #442517;
+} 
+
+.custom-toggler .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgb(68, 37, 23)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
