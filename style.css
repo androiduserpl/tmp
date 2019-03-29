@@ -90,3 +90,12 @@ body {
 a.navbar-brand:hover {
     background-color: #fff;
 }
+
+
+/* Slider */
+
+.slider {
+    height: 60vh;
+    width: 100%;
+    background-color: bisque;
+}
