@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <style>
+        * {
+            background-color: #E9EEF2;
+            font-family: Arial, Helvetica, sans-serif
+        }
+
+        .input__area,
+        .output__area {
+            text-align: center;
+            display: inline-block;
+        }
+
+        .input__area {}
+
+        .upper__section {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        textarea {
+            border: solid 1px #1B33BF;
+            background-color: rgba(54, 99, 191, 0.37);
+            width: 400px;
+            height: 100px;
+            resize: none;
+        }
+
+        hr {
+            border: 5px solid #000;
+            border-radius: 2px;
+        }
+
+        #convert {
+            text-transform: uppercase;
+            font-size: 15px;
+            letter-spacing: 1px;
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #364ABF;
+            color: #fff;
+        }
+
+        #convert:hover {
+            transition: .5s;
+            background-color: #1B33BF;
+            color: #BF9663;
+            cursor: pointer;
+        }
+
+        #convert:active {
+            background-color: aquamarine;
+        }
+
+    </style>
+
+
+
+    <div class="upper__section">
+        <div class="input__area">
+            <h3>Uppercase text</h3>
+            <textarea name="input" id="intput__data" cols="30" rows="10"></textarea>
+        </div>
+        <div class="output__area">
+            <h3>Lowcase text</h3>
+            <textarea name="output" id="output__data" cols="30" rows="10"></textarea>
+        </div>
+
+    </div>
+
+    <div id="convert"> Convert</div>
+
+
+    <h2>Historia</h2>
+    <ul id="history">
+    </ul>
+
+    <script>
+        console.log('helo');
+
+        var showInside = function() {
+            var income = document.getElementById('intput__data');
+            var toLower = income.value.toLocaleLowerCase();
+
+
+            document.getElementById('output__data').value = toLower;
+
+            income.value = '';
+
+            // History
+
+            var node = document.createElement("LI");
+            var textnode = document.createTextNode(toLower);
+            node.appendChild(textnode);
+            document.getElementById('history').appendChild(node);
+        };
+
+
+        // Event listeners:
+
+        //on click
+        document.getElementById('convert').addEventListener('click', showInside);
+
+        // Ctrl + Enter
+        document.onkeyup = function(e) {
+            if (e.ctrlKey && e.which == 13) {
+                showInside();
+            }
+        };
+
+    </script>
+
+</body>
+
+</html>
